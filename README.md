@@ -1,4 +1,3 @@
-nlfiedler.github.io
-===================
+# nlfiedler.github.io
 
-My blog
+My blog, which can be found [here](http://nlfiedler.github.io). Corrections via pull requests are welcome. For now, commenting is not available, but I will work on that.
