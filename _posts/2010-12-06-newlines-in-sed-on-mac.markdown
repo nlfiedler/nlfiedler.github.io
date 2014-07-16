@@ -18,15 +18,17 @@ For whatever reason, this is harder than it should have been. All I wanted to do
 
 Luckily enough I found a [blog post](http://www.culmination.org/2008/02/10/sed-on-mac-os-x-105-leopard/) that discussed, among other things, how to inject a newline using sed on Mac. Although the example is rather complicated given that he's solving a different problem, the crux of the matter is this expression: `$'\n/g'`
 
-    
     $ echo 'foo bar baz quux' | sed -e 's/ /\'$'\n/g'
     foo
     bar
     baz
     quux
-    
 
+All that is really doing is taking advantage of the bash `extquote` option where `$'string'` quoting is performed on the enclosed string. In this case it's a `\n` which expands to a newline character, followed by `/g` which goes through as-is. The baskslash (`\`) before the `$'\n/g'` tells sed to escape the newline character in the replacement string. I'm no expert here, but my understanding is that the argument to sed consists of two parts, the `s/ /\` and the `[newline]/g`, where the latter resulted from the `$'\n/g'` evaluated by bash. Together this forms the sed expression `s/ /\[newline]/g`. How the `\'` doesn't escape the quote and go through as-is to sed I'm not sure.
 
-All that is really doing is taking advantage of the bash `extquote` option where `$'string'` quoting is performed on the enclosed string. In this case it's a `\n` which expands to a newline character, followed by `/g` which goes through as-is. The baskslash (`\`) before the `$'\n/g'` tells sed to escape the newline character in the replacement string. I'm no expert here, but my understanding is that the argument to sed consists of two parts, the `s/ /\` and the `[newline]/g`, where the latter resulted from the `$'\n/g'` evaluated by bash. Together this forms the sed expression `s/ /\[newline]/g`. How the `\'` doesn't escape the quote and go through as-is to sed I'm not sure. Maybe someone can explain in the comments.
+In the original posting of this blog entry on Wordpress.com, commenter Юрий Пухальский suggested using the standard POSIX way, the escaped newline. I have to admit, I did not encounter that anywhere when looking for a solution, but seems a good alternative. Here's his/her example:
+
+    echo "a b c" | sed 's/ /\
+    /g'
 
 Thanks for reading!
