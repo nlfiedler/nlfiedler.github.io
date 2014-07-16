@@ -23,25 +23,12 @@ $ make
 $ sudo make install
 ```
 
-## Lunzip
-
-Install lunzip so that you can uncompress the GMP tarball, which is required for SWI Prolog.
-
-```
-$ tar zxf lunzip-1.5.tar.gz
-$ cd lunzip-1.5
-$ ./configure
-$ make
-$ sudo make install
-```
-
 ## GMP
 
 Install GMP, which is needed for multi-precision numbers in Prolog.
 
 ```
-$ lunzip gmp-6.0.0a.tar.lz
-$ tar xf gmp-6.0.0a.tar
+$ tar jxf gmp-6.0.0a.tar.bz2
 $ cd gmp-6.0.0/
 $ ./configure
 $ make
