@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "Building SWI Prolog on Mac"
-date:   2014-07-12 20:50:36
-tags:   darwin mac prolog compiling
+title: Building SWI Prolog on Mac
+date: 2014-07-12 20:50:36
+tags: darwin mac prolog compiling
+comments: true
 ---
 
 # Building SWI Prolog on Mac
