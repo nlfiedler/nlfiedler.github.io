@@ -6,8 +6,6 @@ layout: post
 slug: more-subversion-vs-mercurial-metrics
 title: More Subversion vs. Mercurial metrics
 wordpress_id: 66
-categories:
-- Computing
 tags:
 - comparison
 - mercurial

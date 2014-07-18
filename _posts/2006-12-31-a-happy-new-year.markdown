@@ -6,8 +6,6 @@ layout: post
 slug: a-happy-new-year
 title: A Happy New Year
 wordpress_id: 26
-categories:
-- Remodeling
 tags:
 - furnace
 - inspections

@@ -6,8 +6,6 @@ layout: post
 slug: from-no-dentist-to-great-coffee
 title: From no dentist to great coffee
 wordpress_id: 7
-categories:
-- Coffee
 tags:
 - dentistry
 ---

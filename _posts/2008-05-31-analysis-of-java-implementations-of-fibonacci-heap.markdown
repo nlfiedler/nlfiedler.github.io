@@ -6,9 +6,6 @@ layout: post
 slug: analysis-of-java-implementations-of-fibonacci-heap
 title: Analysis of Java implementations of Fibonacci Heap
 wordpress_id: 67
-categories:
-- Algorithms
-- Computing
 tags:
 - fibonacci
 - java

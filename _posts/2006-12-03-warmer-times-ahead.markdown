@@ -6,8 +6,6 @@ layout: post
 slug: warmer-times-ahead
 title: Warmer Times Ahead
 wordpress_id: 24
-categories:
-- Remodeling
 tags:
 - furnace
 - heating

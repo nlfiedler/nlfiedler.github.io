@@ -6,9 +6,6 @@ layout: post
 slug: comparing-drobo-and-droboshare-to-an-opensolaris-storage-server
 title: Comparing Drobo and DroboShare to an OpenSolaris storage server
 wordpress_id: 72
-categories:
-- Computing
-- Storage
 tags:
 - drobo
 - opensolaris

@@ -6,9 +6,6 @@ layout: post
 slug: installing-logwatch-on-opensolaris
 title: Installing Logwatch on OpenSolaris
 wordpress_id: 90
-categories:
-- Computing
-- HowTo
 tags:
 - logwatch
 - opensolaris

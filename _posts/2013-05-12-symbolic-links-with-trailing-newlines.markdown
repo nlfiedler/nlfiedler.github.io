@@ -6,8 +6,6 @@ layout: post
 slug: symbolic-links-with-trailing-newlines
 title: Symbolic links with trailing newlines?
 wordpress_id: 279
-categories:
-- Computing
 ---
 
 Recently I encountered a weird situation where the software we were developing was producing symbolic links that didn't link.

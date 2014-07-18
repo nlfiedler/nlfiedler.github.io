@@ -6,8 +6,6 @@ layout: post
 slug: why-ruby-is-so-appealing-to-me
 title: Why Ruby is so appealing (to me)
 wordpress_id: 41
-categories:
-- Computing
 tags:
 - ruby
 ---

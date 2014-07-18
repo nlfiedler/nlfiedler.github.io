@@ -6,8 +6,6 @@ layout: post
 slug: whats-the-best-programming-language
 title: What's the best programming language?
 wordpress_id: 63
-categories:
-- Computing
 tags:
 - programming languages
 ---

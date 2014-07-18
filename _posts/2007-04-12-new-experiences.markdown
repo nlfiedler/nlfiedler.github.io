@@ -6,10 +6,6 @@ layout: post
 slug: new-experiences
 title: New Experiences
 wordpress_id: 33
-categories:
-- Career
-- Computing
-- Thoughts
 tags:
 - apple
 - mac

@@ -6,10 +6,6 @@ layout: post
 slug: setting-up-smartmontools-on-opensolaris
 title: Setting up smartmontools on OpenSolaris
 wordpress_id: 77
-categories:
-- Computing
-- HowTo
-- Storage
 tags:
 - opensolaris
 - smartmontools

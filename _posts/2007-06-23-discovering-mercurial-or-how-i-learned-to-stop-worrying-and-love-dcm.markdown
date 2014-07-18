@@ -6,9 +6,6 @@ layout: post
 slug: discovering-mercurial-or-how-i-learned-to-stop-worrying-and-love-dcm
 title: Discovering Mercurial, or how I learned to stop worrying and love DCM
 wordpress_id: 44
-categories:
-- Computing
-- SCM
 tags:
 - dvcs
 - mercurial

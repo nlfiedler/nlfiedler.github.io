@@ -6,8 +6,6 @@ layout: post
 slug: feeding-the-hiring-machine
 title: Feeding the Hiring Machine
 wordpress_id: 42
-categories:
-- Career
 tags:
 - google
 - hiring

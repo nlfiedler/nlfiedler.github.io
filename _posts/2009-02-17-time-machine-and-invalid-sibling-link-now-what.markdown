@@ -6,10 +6,6 @@ layout: post
 slug: time-machine-and-invalid-sibling-link-now-what
 title: Time Machine and invalid sibling link, now what?
 wordpress_id: 71
-categories:
-- Computing
-- Scripting
-- Storage
 tags:
 - hfs
 - mac

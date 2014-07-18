@@ -6,9 +6,6 @@ layout: post
 slug: the-iphone-sucks-and-other-big-fat-lies
 title: The iPhone sucks (and other big, fat lies)
 wordpress_id: 47
-categories:
-- Reviews
-- Technology
 tags:
 - iphone
 ---

@@ -6,8 +6,6 @@ layout: post
 slug: conservative-can-be-good
 title: Conservative Can Be Good
 wordpress_id: 21
-categories:
-- Thoughts
 tags:
 - dentistry
 ---

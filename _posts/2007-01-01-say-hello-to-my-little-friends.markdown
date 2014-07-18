@@ -6,8 +6,6 @@ layout: post
 slug: say-hello-to-my-little-friends
 title: Say Hello to My Little Friends
 wordpress_id: 27
-categories:
-- Coffee
 tags:
 - espresso
 - mazzer

@@ -6,8 +6,6 @@ layout: post
 slug: uh-oh
 title: Uh Oh!
 wordpress_id: 19
-categories:
-- Children
 tags:
 - language
 ---

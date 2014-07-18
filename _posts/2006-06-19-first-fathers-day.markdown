@@ -6,9 +6,6 @@ layout: post
 slug: first-fathers-day
 title: First Father's Day
 wordpress_id: 9
-categories:
-- Children
-- Remodeling
 tags:
 - religion
 ---

@@ -6,8 +6,6 @@ layout: post
 slug: no-more-starbucks
 title: No More Starbucks
 wordpress_id: 18
-categories:
-- Coffee
 tags:
 - espresso
 ---

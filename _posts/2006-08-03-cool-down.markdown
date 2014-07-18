@@ -6,8 +6,6 @@ layout: post
 slug: cool-down
 title: Cool Down
 wordpress_id: 15
-categories:
-- Remodeling
 ---
 
 So the hot weather is gone, just as quickly as it arrived. We survived an 11 day heat wave and now it’s barely 75 during the day, and below 60 at night. I ordered the Tamarack Ghost “whole house fan” but its on back order. Hardly matters since we won’t be needing it for a while. Still, those Indian summers are coming in a couple of months.

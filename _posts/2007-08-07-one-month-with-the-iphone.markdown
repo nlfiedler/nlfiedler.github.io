@@ -6,9 +6,6 @@ layout: post
 slug: one-month-with-the-iphone
 title: One month with the iPhone
 wordpress_id: 50
-categories:
-- Reviews
-- Technology
 tags:
 - iphone
 ---

@@ -6,8 +6,6 @@ layout: post
 slug: most-expensive-room-in-the-house
 title: Most Expensive Room in the House
 wordpress_id: 13
-categories:
-- Remodeling
 ---
 
 We are in the midst of remodeling our kitchen. The plumbing was finished very quickly, in just two days. It took me a bit longer to get the walls patched though. I settled on using cement board and furring strips to get the new material to be flush with the existing (irregular) wall surface. The good news is the water pressure is much better than before, and the new fixtures in the bathroom make it feel like a mini-remodeling.

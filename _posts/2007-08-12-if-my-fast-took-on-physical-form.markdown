@@ -6,8 +6,6 @@ layout: post
 slug: if-my-fast-took-on-physical-form
 title: If my "fast" took on physical form...
 wordpress_id: 51
-categories:
-- Cars
 tags:
 - fast
 - gti

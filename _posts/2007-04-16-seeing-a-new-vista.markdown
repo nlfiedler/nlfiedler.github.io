@@ -6,8 +6,6 @@ layout: post
 slug: seeing-a-new-vista
 title: Seeing a New Vista
 wordpress_id: 34
-categories:
-- Computing
 tags:
 - apple
 - vista

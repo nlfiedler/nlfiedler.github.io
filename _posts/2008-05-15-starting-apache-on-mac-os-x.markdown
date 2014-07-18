@@ -6,9 +6,6 @@ layout: post
 slug: starting-apache-on-mac-os-x
 title: Starting Apache on Mac OS X
 wordpress_id: 64
-categories:
-- Computing
-- HowTo
 tags:
 - apache
 - launchd

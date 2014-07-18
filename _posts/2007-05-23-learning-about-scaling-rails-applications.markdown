@@ -6,8 +6,6 @@ layout: post
 slug: learning-about-scaling-rails-applications
 title: Learning About Scaling Rails Applications
 wordpress_id: 37
-categories:
-- Computing
 tags:
 - rails
 - ruby

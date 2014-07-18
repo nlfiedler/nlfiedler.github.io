@@ -6,8 +6,6 @@ layout: post
 slug: foodie-in-the-making
 title: Foodie in the making
 wordpress_id: 55
-categories:
-- Culture
 tags:
 - bread
 - Coffee

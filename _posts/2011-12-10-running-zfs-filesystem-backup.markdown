@@ -6,9 +6,6 @@ layout: post
 slug: running-zfs-filesystem-backup
 title: Running ZFS filesystem backup
 wordpress_id: 168
-categories:
-- Computing
-- Storage
 tags:
 - backup
 - openindiana

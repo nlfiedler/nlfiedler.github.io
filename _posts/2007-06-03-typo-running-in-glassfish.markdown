@@ -6,8 +6,6 @@ layout: post
 slug: typo-running-in-glassfish
 title: Typo running in Glassfish
 wordpress_id: 43
-categories:
-- Computing
 tags:
 - glassfish
 - ruby

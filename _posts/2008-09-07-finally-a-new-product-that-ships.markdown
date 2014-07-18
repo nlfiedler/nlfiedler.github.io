@@ -6,8 +6,6 @@ layout: post
 slug: finally-a-new-product-that-ships
 title: Finally, a new product that ships
 wordpress_id: 68
-categories:
-- Computing
 tags:
 - kenai
 - whining

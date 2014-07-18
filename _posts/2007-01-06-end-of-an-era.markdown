@@ -6,8 +6,6 @@ layout: post
 slug: end-of-an-era
 title: End of an Era
 wordpress_id: 28
-categories:
-- Remodeling
 tags:
 - gardening
 ---

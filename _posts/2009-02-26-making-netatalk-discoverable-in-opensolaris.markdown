@@ -6,10 +6,6 @@ layout: post
 slug: making-netatalk-discoverable-in-opensolaris
 title: Making netatalk discoverable in OpenSolaris
 wordpress_id: 83
-categories:
-- Computing
-- HowTo
-- Storage
 tags:
 - mac
 - netatalk

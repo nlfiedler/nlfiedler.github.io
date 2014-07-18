@@ -6,8 +6,6 @@ layout: post
 slug: why-microsoft-is-not-ready-for-web-20
 title: Why Microsoft is not ready for Web 2.0
 wordpress_id: 40
-categories:
-- Computing
 tags:
 - internet explorer
 - web 2.0

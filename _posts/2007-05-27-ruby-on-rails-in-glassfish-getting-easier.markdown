@@ -6,8 +6,6 @@ layout: post
 slug: ruby-on-rails-in-glassfish-getting-easier
 title: Ruby on Rails in Glassfish, getting easier
 wordpress_id: 39
-categories:
-- Computing
 tags:
 - glassfish
 - rails

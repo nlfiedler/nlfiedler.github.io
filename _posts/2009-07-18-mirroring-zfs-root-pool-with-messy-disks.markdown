@@ -6,10 +6,6 @@ layout: post
 slug: mirroring-zfs-root-pool-with-messy-disks
 title: Mirroring ZFS root pool with messy disks
 wordpress_id: 121
-categories:
-- Computing
-- HowTo
-- Storage
 tags:
 - opensolaris
 - zfs

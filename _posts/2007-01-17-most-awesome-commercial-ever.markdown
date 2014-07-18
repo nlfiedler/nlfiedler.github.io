@@ -6,8 +6,6 @@ layout: post
 slug: most-awesome-commercial-ever
 title: Most Awesome Commercial Ever
 wordpress_id: 30
-categories:
-- Cars
 tags:
 - advertising
 - bmw

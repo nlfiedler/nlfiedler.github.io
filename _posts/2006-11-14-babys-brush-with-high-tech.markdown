@@ -6,9 +6,6 @@ layout: post
 slug: babys-brush-with-high-tech
 title: Baby's Brush with High-Tech
 wordpress_id: 20
-categories:
-- Children
-- Technology
 tags:
 - schwartz
 ---

@@ -6,10 +6,6 @@ layout: post
 slug: building-a-nas-box
 title: Building a Network Attached Storage box
 wordpress_id: 103
-categories:
-- Computing
-- HowTo
-- Storage
 tags:
 - drobo
 - nas

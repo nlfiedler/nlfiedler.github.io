@@ -6,8 +6,6 @@ layout: post
 slug: evolved-to-gti
 title: Evolved to GTI
 wordpress_id: 32
-categories:
-- Cars
 tags:
 - lancer evo
 - vw gti

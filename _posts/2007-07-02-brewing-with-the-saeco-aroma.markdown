@@ -6,9 +6,6 @@ layout: post
 slug: brewing-with-the-saeco-aroma
 title: Brewing with the Saeco Aroma
 wordpress_id: 46
-categories:
-- Coffee
-- Reviews
 tags:
 - espresso
 ---

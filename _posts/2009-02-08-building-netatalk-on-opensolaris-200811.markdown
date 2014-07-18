@@ -6,10 +6,6 @@ layout: post
 slug: building-netatalk-on-opensolaris-200811
 title: Building netatalk on OpenSolaris 2009.06
 wordpress_id: 70
-categories:
-- Computing
-- HowTo
-- Networking
 tags:
 - mac
 - netatalk

@@ -6,9 +6,6 @@ layout: post
 slug: subversion-to-mercurial-made-easy-with-hgsvn
 title: Subversion to Mercurial made easy with hgsvn
 wordpress_id: 45
-categories:
-- Computing
-- SCM
 tags:
 - hgsvn
 - mercurial

@@ -6,8 +6,6 @@ layout: post
 slug: how-i-fit-my-life-online
 title: How I fit my life online
 wordpress_id: 56
-categories:
-- LifeHacks
 tags:
 - online
 ---

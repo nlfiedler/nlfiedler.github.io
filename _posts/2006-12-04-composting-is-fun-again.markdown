@@ -6,8 +6,6 @@ layout: post
 slug: composting-is-fun-again
 title: Composting is Fun Again
 wordpress_id: 25
-categories:
-- LifeHacks
 tags:
 - composting
 - gardening

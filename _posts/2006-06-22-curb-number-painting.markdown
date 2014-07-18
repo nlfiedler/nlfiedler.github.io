@@ -6,8 +6,6 @@ layout: post
 slug: curb-number-painting
 title: Curb Number Painting
 wordpress_id: 11
-categories:
-- Thoughts
 tags:
 - scam
 ---

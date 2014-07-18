@@ -6,9 +6,6 @@ layout: post
 slug: newlines-in-sed-on-mac
 title: Newlines in sed on Mac
 wordpress_id: 163
-categories:
-- Computing
-- HowTo
 tags:
 - mac
 - sed

@@ -6,8 +6,6 @@ layout: post
 slug: neanderthal-in-the-house
 title: Neanderthal in the House
 wordpress_id: 22
-categories:
-- Children
 tags:
 - toddlers
 ---

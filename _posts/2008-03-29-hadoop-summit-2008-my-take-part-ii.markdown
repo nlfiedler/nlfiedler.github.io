@@ -6,8 +6,6 @@ layout: post
 slug: hadoop-summit-2008-my-take-part-ii
 title: 'Hadoop Summit 2008: My Take (Part II)'
 wordpress_id: 60
-categories:
-- Compiling
 tags:
 - conference
 - hadoop

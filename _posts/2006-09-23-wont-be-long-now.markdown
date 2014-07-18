@@ -6,8 +6,6 @@ layout: post
 slug: wont-be-long-now
 title: Won't be long now...
 wordpress_id: 16
-categories:
-- Remodeling
 ---
 
 so said the monkey, with his long tail laid upon the tracks, and a train whistle blowing in the background.

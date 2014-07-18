@@ -6,8 +6,6 @@ layout: post
 slug: cure-worse-than-illness
 title: Cure Worse Than Illness
 wordpress_id: 31
-categories:
-- Thoughts
 tags:
 - medicine
 - toenails

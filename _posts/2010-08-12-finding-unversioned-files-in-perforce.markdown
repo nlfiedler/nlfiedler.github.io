@@ -6,10 +6,6 @@ layout: post
 slug: finding-unversioned-files-in-perforce
 title: Finding unversioned files in Perforce
 wordpress_id: 161
-categories:
-- Computing
-- SCM
-- Scripting
 tags:
 - perforce
 - python

@@ -6,10 +6,6 @@ layout: post
 slug: using-opensolaris-and-zfs-with-time-machine
 title: Using OpenSolaris and ZFS with Time Machine
 wordpress_id: 96
-categories:
-- Computing
-- HowTo
-- Storage
 tags:
 - mac
 - opensolaris

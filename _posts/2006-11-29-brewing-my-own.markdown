@@ -6,8 +6,6 @@ layout: post
 slug: brewing-my-own
 title: Brewing My Own
 wordpress_id: 23
-categories:
-- Coffee
 tags:
 - espresso
 - steam toy

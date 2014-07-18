@@ -6,8 +6,6 @@ layout: post
 slug: best-shot-ever
 title: Best Shot Ever
 wordpress_id: 29
-categories:
-- Coffee
 tags:
 - espresso
 ---

@@ -6,8 +6,6 @@ layout: post
 slug: two-men-try-to-outsmart-a-rope
 title: Two men try to outsmart a rope
 wordpress_id: 48
-categories:
-- Culture
 tags:
 - dummy
 - knots

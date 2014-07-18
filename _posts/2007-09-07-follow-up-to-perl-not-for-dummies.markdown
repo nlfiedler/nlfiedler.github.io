@@ -6,8 +6,6 @@ layout: post
 slug: follow-up-to-perl-not-for-dummies
 title: Follow-up to Perl not for dummies
 wordpress_id: 53
-categories:
-- Computing
 tags:
 - dummy
 - perl

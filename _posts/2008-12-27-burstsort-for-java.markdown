@@ -6,9 +6,6 @@ layout: post
 slug: burstsort-for-java
 title: Burstsort for Java
 wordpress_id: 69
-categories:
-- Algorithms
-- Computing
 tags:
 - java
 - sorting

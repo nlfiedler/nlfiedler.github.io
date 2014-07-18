@@ -6,8 +6,6 @@ layout: post
 slug: strange-street-names
 title: Strange street names
 wordpress_id: 49
-categories:
-- Thoughts
 tags:
 - names
 - strange

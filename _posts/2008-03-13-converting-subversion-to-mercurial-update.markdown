@@ -6,8 +6,6 @@ layout: post
 slug: converting-subversion-to-mercurial-update
 title: Converting Subversion to Mercurial update
 wordpress_id: 57
-categories:
-- Computing
 tags:
 - mercurial
 - SCM

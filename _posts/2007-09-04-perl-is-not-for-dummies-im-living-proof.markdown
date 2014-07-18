@@ -6,8 +6,6 @@ layout: post
 slug: perl-is-not-for-dummies-im-living-proof
 title: Perl is not for dummies, I'm living proof
 wordpress_id: 52
-categories:
-- Compiling
 tags:
 - dummy
 - perl

@@ -6,8 +6,6 @@ layout: post
 slug: how-to-recover-windows-xp
 title: How to recover Windows XP
 wordpress_id: 35
-categories:
-- Computing
 tags:
 - recovery
 - windows

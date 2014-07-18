@@ -6,9 +6,6 @@ layout: post
 slug: daemonizing-memcached-on-mac
 title: Daemonizing memcached on Mac
 wordpress_id: 65
-categories:
-- Computing
-- HowTo
 tags:
 - launchd
 - mac

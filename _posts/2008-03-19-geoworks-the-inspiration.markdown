@@ -6,8 +6,6 @@ layout: post
 slug: geoworks-the-inspiration
 title: 'Geoworks: the inspiration'
 wordpress_id: 58
-categories:
-- Writing
 tags:
 - geoworks
 ---

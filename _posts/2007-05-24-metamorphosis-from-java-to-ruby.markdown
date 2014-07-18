@@ -6,9 +6,6 @@ layout: post
 slug: metamorphosis-from-java-to-ruby
 title: Metamorphosis, from Java to Ruby
 wordpress_id: 38
-categories:
-- Computing
-- Thoughts
 tags:
 - java
 - ruby

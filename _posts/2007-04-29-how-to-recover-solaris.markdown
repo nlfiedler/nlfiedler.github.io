@@ -6,8 +6,6 @@ layout: post
 slug: how-to-recover-solaris
 title: How to Recover Solaris
 wordpress_id: 36
-categories:
-- Computing
 tags:
 - maintenance
 - recovery

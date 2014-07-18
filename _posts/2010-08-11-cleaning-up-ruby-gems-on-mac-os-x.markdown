@@ -6,9 +6,6 @@ layout: post
 slug: cleaning-up-ruby-gems-on-mac-os-x
 title: Cleaning up Ruby Gems on Mac OS X
 wordpress_id: 155
-categories:
-- Computing
-- HowTo
 tags:
 - gems
 - mac

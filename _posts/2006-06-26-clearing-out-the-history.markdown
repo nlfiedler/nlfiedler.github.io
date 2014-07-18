@@ -6,8 +6,6 @@ layout: post
 slug: clearing-out-the-history
 title: Clearing Out the History
 wordpress_id: 12
-categories:
-- Remodeling
 ---
 
 Today I finished tearing out the old kitchen cabinets. It is fairly clear where the original cabinets were and where the more recent additions were attached. I think we can know that a previous owner, named Gregory, did the work, since his last name was on the underside of the counter top. The new counter top was deeper than the original, so the cabinets had to be “extended” a couple of inches to accomodate a new, larger sink. It appears to have been done rather poorly, but it was functional, if nothing else.

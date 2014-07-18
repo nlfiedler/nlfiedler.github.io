@@ -6,8 +6,6 @@ layout: post
 slug: what-real-friends-are
 title: What Real Friends Are
 wordpress_id: 54
-categories:
-- Culture
 tags:
 - friends
 ---

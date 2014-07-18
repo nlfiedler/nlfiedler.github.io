@@ -6,8 +6,6 @@ layout: post
 slug: nearly-there
 title: Nearly There
 wordpress_id: 17
-categories:
-- Remodeling
 ---
 
 Our kitchen is nearly at a point where it is usable again. The counter top has been installed and I just finished hooking up the sink and garbage disposal. Just need one more piece to complete the drain pipes, but otherwise it is functional. Halleluah! No more washing dishes in the little bathroom sink. No more walking from the kitchen to the bathroom and back again, just to get water. Finally we can use the kitchen like we used to.

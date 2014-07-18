@@ -6,8 +6,6 @@ layout: post
 slug: hot-house
 title: Hot House
 wordpress_id: 14
-categories:
-- Remodeling
 ---
 
 I’ve managed to go two weeks with almost no progress in the kitchen remodeling. I finally got the thin-set mortar mix and that works much better than mortar and spackle. It goes on much easier and has a finer texture, which is perfect for the small crevices in which the mix is applied.

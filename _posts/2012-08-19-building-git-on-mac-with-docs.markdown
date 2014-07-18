@@ -6,10 +6,6 @@ layout: post
 slug: building-git-on-mac-with-docs
 title: Building Git on Mac, with docs!
 wordpress_id: 188
-categories:
-- Compiling
-- Computing
-- HowTo
 tags:
 - git
 - mac
