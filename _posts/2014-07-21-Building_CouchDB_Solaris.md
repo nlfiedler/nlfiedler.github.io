@@ -126,7 +126,7 @@ $ pfexec svcadm enable couch
 
 ## Verification
 
-Visit the Futon web administrative interface by visiting http://whatever:5984/_utils with your browser, then click the __Verify Installation__ link on the sidebar. If that does not pass, it could be that the `couchjs` binary is unable to find a library. See the note about `crle` above.
+Visit the Futon web administrative interface by visiting http://yourhost:5984/\_utils with your browser, then click the __Verify Installation__ link on the sidebar. If that does not pass, it could be that the `couchjs` binary is unable to find a library. See the note about `crle` above.
 
 ## What about the build-CouchDB project?
 
