@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Building CouchDB on OpenIndiana
-date: 2014-07-19 20:27:03
+date: 2014-07-21 20:27:03
 tags:
 - solaris
 - openindiana
