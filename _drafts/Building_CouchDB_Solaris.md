@@ -17,7 +17,7 @@ comments: true
 
 ### Erlang/OTP
 
-See my other blog post on building Erlang on OpenIndiana.
+See my earlier blog post on building Erlang on OpenIndiana. It's not much of a challenge, but does involve a few steps.
 
 ### ICU
 
@@ -34,12 +34,13 @@ One small problem with this package is that it seems to be incompatible with the
 Mozilla's [SpiderMonkey](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey) provides the JavaScript engine for CouchDB to process map/reduce functions and execute view queries. Installing from source on OpenIndiana is non-trivial, so use the [SFE](http://wiki.openindiana.org/oi/Spec+Files+Extra+Repository) package instead.
 
 ```
+$ pfexec pkg set-publisher -p http://pkg.openindiana.org/sfe
 $ pfexec pkg install runtime/javascript/spidermonkey
 ```
 
-### Netscape Portable Runtime
+### Netscape Portable Runtime headers
 
-Surprise! I bet you didn't know you needed this one. It's certainly not mentioned anywhere obvious. It took some detective work, and I'm ever so slightly proud of myself because I usually can't figure these things out. The clue was to look in the `config.log` after CouchDB `configure` failed to find `JS_NewContext` in the `mozjs185` library. From the log, it becomes clear that the problem has nothing at all to do with SpiderMonkey and instead it's missing a file named `nspr.pc`. After some searching and package querying, I came to find that the OpenIndiana package `library/nspr/header-nspr` fits the bill.
+This one was tricky to discover. It is not mentioned anywhere obvious, and it took some detective work to figure it out. The clue was to look in the `config.log` after CouchDB `configure` failed to find `JS_NewContext` in the `mozjs185` library. From the log, it becomes clear that the problem has nothing at all to do with SpiderMonkey and instead it's missing a file named `nspr.pc`. After some searching and package querying, I came to find that the OpenIndiana package `library/nspr/header-nspr` fits the bill.
 
 ```
 $ pfexec pkg install library/nspr/header-nspr
@@ -47,10 +48,10 @@ $ pfexec pkg install library/nspr/header-nspr
 
 ## Compiling and Installing CouchDB
 
-Once all of the dependencies have been installed, and the `icu-config` has been hacked, compiling and installing CouchDB is trivial. The `crle` command at the end is so that `couchjs` can find `libplds4.so`, otherwise the database verification fails.
+Once all of the dependencies have been installed, and the `icu-config` has been hacked, compiling and installing CouchDB is _easier_. I found that I had to add a couple of directories to the `LDFLAGS` in order for `configure` to find the NSPR library. The `crle` command at the end is so that `couchjs` can find `libplds4.so`, otherwise the database verification fails.
 
 ```
-$ ./configure
+$ LDFLAGS='-L/usr/lib -L/usr/lib/mps' ./configure
 $ make
 $ pfexec make install
 $ pfexec crle -u -l /usr/lib/mps
