@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Building Git on OpenIndiana
+title: Building Git with docs on OpenIndiana
 date: 2014-07-19 20:58:03
 tags:
 - solaris
@@ -8,8 +8,6 @@ tags:
 - git
 comments: true
 ---
-
-# Building Git on OpenIndiana
 
 The existing packages for [Git](http://git-scm.com) on [OpenIndiana](http://openindiana.org) are woefully out of date. Sure, they work, but they also pull in an ancient version of Python (2.4!). OpenIndiana already has much of what it needs, so building Git from source should be easy. To start with, install those packages needed for compiling and installing software from source.
 
@@ -20,7 +18,7 @@ $ pfexec pkg install system/header
 $ pfexec pkg install system/library/math/header-math
 $ pfexec pkg install developer/library/lint
 $ export PATH=/opt/gcc/4.4.4/bin:$PATH
-$ pfexec pkg install SUNWscp
+$ pfexec pkg install compatibility/ucb
 ```
 
 And now we are ready to build and install Git itself.
@@ -55,30 +53,51 @@ $ pfexec pkg install text/gnu-gettext
 
 ### getopt
 
-_Work in progress..._
-_Does the SUNWcs package satisfy this requirement already?_
+The non-GNU version of getopt is provided in Solaris via the `SUNWcs` package. However, xmlto needs the GNU version that supports the `--longoptions` argument.
 
-Download [getopt](http://software.frodo.looijaard.name/getopt/), extract the tarball, open the `Makefile` in an editor and add `-lintl` to the `LDFLAGS` variable, and then compile and install.
+Download [getopt](http://software.frodo.looijaard.name/getopt/download.php), extract the tarball, open the `Makefile` in an editor and make the following changes:
+
+* Change `LIBCGETOPT` to `0`
+* Change `WITHOUT_GETTEXT` to `1`
+* Change `INSTALL` and `ginstall`
+
+At this point `make` and `pfexec make install` should work, despite some suspicious compiler warnings.
+
+### Docbook
 
 ```
+$ pfexec pkg install data/docbook
+```
+
+### Docbook2X
+
+[Docbook2X](http://sourceforge.net/projects/docbook2x/) converts DocBook documents to man and Texinfo format which is how we get the git man pages. Before you can build it, however, you must install the `XML::SAX` Perl module.
+
+```
+$ pfexec perl -MCPAN -e 'install XML::SAX'
+$ ./configure
+$ make
+$ pfexec make install
+$ cd /usr/local/bin
+$ pfexec ln -s docbook2texi docbook2x-texi
+$ pfexec xmlcatalog --noout --add nextCatalog '' file:///usr/local/share/docbook2X/xslt/catalog.xml --create /etc/xml/catalog
+```
+
+### xmlto
+
+Compile and install [xmlto](https://fedorahosted.org/releases/x/m/xmlto/) by first ensuring that `/usr/local/bin` is in your `PATH` before `/usr/bin`. Now the usual steps will suffice and we are nearly at our goal.
+
+```
+$ ./configure
 $ make
 $ pfexec make install
 ```
 
-### Docbook
-
-* Install Docbook XSL and Docbook XML
-* Install Docbook2X
-    * perl -MCPAN -e 'install XML::SAX'
-
-### xmlto
-
-* Install xmlto
-
 ### Finally, Git's documentation
 
+* Edit the `Documentation/Makefile` and add `--skip-validation` to `XMLTO_EXTRA`.
+
 ```
-$ ./configure
 $ make doc info
 $ pfexec make install-doc install-html install-info
 ```
