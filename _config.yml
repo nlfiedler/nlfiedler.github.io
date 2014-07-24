@@ -1,3 +1,8 @@
 name: Caffeinated
 markdown: redcarpet
 pygments: true
+keywords:
+- blog
+- nathan
+- fiedler
+description: Nathan Fiedler's mostly technical blog.

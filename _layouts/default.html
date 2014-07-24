@@ -3,15 +3,25 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
+        <title>{{ site.name }} - {{ page.title }}</title>
         <meta name="author" content="Nathan Fiedler">
         <meta name="viewport" content="width=device-width">
-
+        {% if page.date %}
+        <meta http-equiv="date" content="{{page.date |date: '%A, %d  %Y %H:%M:%S GMT'}}" />
+        {% endif %}
+        {% if page.description %}
+        <meta name="description" content="{{ page.description }}" />
+        {% else %}
+        <meta name="description" content="{{ site.description }}" />
+        {% endif %}
+        {% if page.tags == empty %}
+        <meta name="keywords" content="{{ site.keywords | join: ',' }}" />
+        {% else %}
+        <meta name="keywords" content="{{ page.tags | join: ',' }}" />
+        {% endif %}
         <link ref="shortcut icon" type="image/x-icon" href="favicon.ico">
-
         <!-- syntax highlighting CSS -->
         <link rel="stylesheet" href="/css/syntax.css">
-
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/main.css">
 

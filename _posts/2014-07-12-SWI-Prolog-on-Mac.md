@@ -4,6 +4,7 @@ title: Building SWI Prolog on Mac
 date: 2014-07-12 20:50:36
 tags: darwin mac prolog compiling
 comments: true
+description: Building SWI Prolog on Mac OS X without using an packaging systems.
 ---
 
 Getting [SWI Prolog](http://www.swi-prolog.org) to build on Mac OS X (Darwin) is no small feat. Yes, one could use the [MacPorts](http://www.macports.org) or [Homebrew](http://brew.sh) packaging systems, and that would certainly make things easier. Frankly, after using Solaris for many years, I'm burned out on third-party packaging systems. Especially when there are multiple competing systems; it makes the [Dependency hell](http://en.wikipedia.org/wiki/Dependency_hell) that much worse.

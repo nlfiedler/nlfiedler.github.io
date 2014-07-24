@@ -7,6 +7,7 @@ tags:
 - openindiana
 - erlang
 comments: true
+description: Building Erlang/OTP from source on OpenIndiana using mostly system packages.
 ---
 
 Building [Erlang](http://www.erlang.org) on [OpenIndiana](http://openindiana.org) isn't really all that difficult, but does involve a few steps, so worth documenting in order to save time in the future. Why build Erlang? Because it [rocks!](http://erlangotp.com)

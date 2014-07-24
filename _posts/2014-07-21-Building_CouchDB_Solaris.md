@@ -7,6 +7,7 @@ tags:
 - openindiana
 - couchdb
 comments: true
+description: Building Apache CouchDB from source on OpenIndiana using mostly system packages.
 ---
 
 [CouchDB](http://couchdb.apache.org) rocks! I really like their data model, especially with respect to data integrity (i.e. never overwriting live data). That being said, Solaris plays second fiddle to Linux for many open source applications, and CouchDB is no different. Getting it working was a multiple day challenge.
