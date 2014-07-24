@@ -6,8 +6,6 @@ tags: darwin mac prolog compiling
 comments: true
 ---
 
-# Building SWI Prolog on Mac
-
 Getting [SWI Prolog](http://www.swi-prolog.org) to build on Mac OS X (Darwin) is no small feat. Yes, one could use the [MacPorts](http://www.macports.org) or [Homebrew](http://brew.sh) packaging systems, and that would certainly make things easier. Frankly, after using Solaris for many years, I'm burned out on third-party packaging systems. Especially when there are multiple competing systems; it makes the [Dependency hell](http://en.wikipedia.org/wiki/Dependency_hell) that much worse.
 
 Below, I'll quickly go over each of the steps for compiling `swipl` and its dependencies. This assumes you have installed [Xcode](https://developer.apple.com/xcode/) since it tends to make compiling software from source code much easier.
