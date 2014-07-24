@@ -10,7 +10,7 @@ comments: true
 description: Building Git and its documentation from source on OpenIndiana.
 ---
 
-The existing packages for [Git](http://git-scm.com) on [OpenIndiana](http://openindiana.org) are woefully out of date. Sure, they work, but they also pull in an ancient version of Python (2.4!). OpenIndiana already has much of what it needs, so building Git from source should be easy. To start with, install those packages needed for compiling and installing software from source.
+The existing packages for [Git](http://git-scm.com) on [OpenIndiana](http://openindiana.org) are woefully out of date. Sure, they work, but they also pull in an ancient version of Python (2.4!). OpenIndiana already has much of what it needs, so building Git from source _should_ be easy. To start with, install those packages needed for compiling and installing software from source.
 
 ```
 $ pfexec pkg install developer/illumos-gcc
@@ -18,11 +18,11 @@ $ pfexec pkg install developer/gnu-binutils
 $ pfexec pkg install system/header
 $ pfexec pkg install system/library/math/header-math
 $ pfexec pkg install developer/library/lint
-$ export PATH=/opt/gcc/4.4.4/bin:$PATH
 $ pfexec pkg install compatibility/ucb
+$ export PATH=/opt/gcc/4.4.4/bin:$PATH
 ```
 
-And now we are ready to build and install Git itself.
+Now we are ready to build and install Git from source.
 
 ```
 $ ./configure
@@ -30,13 +30,15 @@ $ make
 $ pfexec make install
 ```
 
+And that is about how far most posts with regards to Git on Solaris will get you. But we desire more. What do we want? Man pages! When do we want them? Now! Okay, let's get to it.
+
 ## With the Documentation
 
-To build Git's documentation from source, there is quite a bit of setup needed.
+To build Git's documentation from source, there is quite a bit of setup needed. To start with, let's get the numerous dependencies installed.
 
 ### AsciiDoc
 
-Retrieve the latest tarball for [AsciiDoc](http://sourceforge.net/projects/asciidoc/) and build using the usual command sequence.
+Retrieve the latest tarball for [AsciiDoc](http://sourceforge.net/projects/asciidoc/) and build using the usual command sequence. There is surprisingly little output for this one, but that is perfectly normal.
 
 ```
 $ ./configure
@@ -46,7 +48,7 @@ $ pfexec make install
 
 ### gettext
 
-Super easy.
+Super easy, just use the package.
 
 ```
 $ pfexec pkg install text/gnu-gettext
@@ -58,9 +60,9 @@ The non-GNU version of getopt is provided in Solaris via the `SUNWcs` package. H
 
 Download [getopt](http://software.frodo.looijaard.name/getopt/download.php), extract the tarball, open the `Makefile` in an editor and make the following changes:
 
-* Change `LIBCGETOPT` to `0`
-* Change `WITHOUT_GETTEXT` to `1`
-* Change `INSTALL` to `ginstall`
+* Find and set `LIBCGETOPT` to `0`
+* Find and set `WITHOUT_GETTEXT` to `1`
+* Find and set `INSTALL` to `ginstall`
 
 At this point `make` and `pfexec make install` should work, despite some suspicious compiler warnings.
 
@@ -87,6 +89,8 @@ $ pfexec xmlcatalog --noout --add nextCatalog '' \
     file:///usr/local/share/docbook2X/xslt/catalog.xml --create /etc/xml/catalog
 ```
 
+The symbolic link for `docbook2x-texi` is somethig I found somewhere when creating these instructions for Mac OS X and I have since forgotten the source. My apologies, and thanks, go out to whomever figured that out.
+
 ### xmlto
 
 Compile and install [xmlto](https://fedorahosted.org/releases/x/m/xmlto/) by first ensuring that `/usr/local/bin` is in your `PATH` before `/usr/bin` (so it finds the `getopt` we just installed). Now the usual steps will suffice and we are nearly at our goal.
@@ -99,7 +103,7 @@ $ pfexec make install
 
 ### Finally, Git's documentation
 
-Hallelujah, we're finally ready to build Git's documentation! Just one little modification to a makefile and we're ready to go. Edit the `Documentation/Makefile` and add `--skip-validation` to `XMLTO_EXTRA`; mine had trouble fetching the Docbook DTD for some unknown reason.
+Hallelujah, we're finally ready to build Git's documentation! Just one little modification to a makefile and we're ready to go. Edit the `Documentation/Makefile` and add `--skip-validation` to `XMLTO_EXTRA`; my build had trouble fetching the Docbook DTD for some unknown reason.
 
 And now to build the docs. Prepare to wait a while, it is a slow process.
 

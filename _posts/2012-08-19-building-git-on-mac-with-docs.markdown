@@ -10,6 +10,7 @@ tags:
 - git
 - mac
 - SCM
+description: Building Git and its documentation from source on Mac OS X.
 ---
 
 If you have built [Git](http://git-scm.org/) from source on Mac OS X you probably didn't have much trouble. That is, unless you were trying to also build the documentation, in which case you probably ran into problems, right? I'm guessing it happened somewhere around getopt, gettext, or some other library or tool you didn't have installed. And after several attempts to get the nth dependency to build you gave up. Look no further, as these steps will build Git _and_ its documentation on Mac OS X, at least as of today.
@@ -32,8 +33,10 @@ $ cd /usr/local/share/docbook
 $ sudo tar jxf ~/Downloads/docbook-xsl-1.78.1.tar.bz2
 $ sudo unzip ~/Downloads/docbook-xml-4.5.zip -d docbook-xml-4.5
 $ sudo mkdir /etc/xml
-$ sudo xmlcatalog --noout --add nextCatalog '' file:///usr/local/share/docbook/docbook-xsl-1.77.1/catalog.xml --create /etc/xml/catalog
-$ sudo xmlcatalog --noout --add nextCatalog '' file:///usr/local/share/docbook/docbook-xml-4.5/catalog.xml --create /etc/xml/catalog
+$ sudo xmlcatalog --noout --add nextCatalog '' \
+    file:///usr/local/share/docbook/docbook-xsl-1.77.1/catalog.xml --create /etc/xml/catalog
+$ sudo xmlcatalog --noout --add nextCatalog '' \
+    file:///usr/local/share/docbook/docbook-xml-4.5/catalog.xml --create /etc/xml/catalog
 ```
 
 E. Install [Docbook2X](http://sourceforge.net/projects/docbook2x/files/docbook2x/) which apparently wasn't necessary when the Wincent page was written.
@@ -44,7 +47,8 @@ $ make
 $ sudo make install
 $ cd /usr/local/bin
 $ sudo ln -s docbook2texi docbook2x-texi
-$ sudo xmlcatalog --noout --add nextCatalog '' file:///usr/local/share/docbook2X/xslt/catalog.xml --create /etc/xml/catalog
+$ sudo xmlcatalog --noout --add nextCatalog '' \
+    file:///usr/local/share/docbook2X/xslt/catalog.xml --create /etc/xml/catalog
 ```
 
 F. Install [xmlto](https://fedorahosted.org/releases/x/m/xmlto/) by first ensuring that `/usr/local/bin` is in your `PATH` before `/usr/bin` (`sudo vi /etc/paths` may help). Now the usual `configure`, `make`, `sudo make install` and you are nearly there.
