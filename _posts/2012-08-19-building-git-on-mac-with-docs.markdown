@@ -37,7 +37,7 @@ Download [getopt](http://software.frodo.looijaard.name/getopt/download.php), ext
 
 Install [Docbook XSL](http://sourceforge.net/projects/docbook/files/docbook-xsl/) and [Docbook XML](http://www.oasis-open.org/docbook/xml/4.5/), which is a bit more involved. This is a streamlined version of what you will find on the Wincent wiki.
 
-```
+{% highlight sh %}
 $ sudo mkdir -p /usr/local/share/docbook
 $ cd /usr/local/share/docbook
 $ sudo tar jxf ~/Downloads/docbook-xsl-1.78.1.tar.bz2
@@ -47,13 +47,13 @@ $ sudo xmlcatalog --noout --add nextCatalog '' \
     file:///usr/local/share/docbook/docbook-xsl-1.77.1/catalog.xml --create /etc/xml/catalog
 $ sudo xmlcatalog --noout --add nextCatalog '' \
     file:///usr/local/share/docbook/docbook-xml-4.5/catalog.xml --create /etc/xml/catalog
-```
+{% endhighlight %}
 
 ## Docbook2X
 
 Install [Docbook2X](http://sourceforge.net/projects/docbook2x/files/docbook2x/) which apparently wasn't necessary when the Wincent page was written.
 
-```
+{% highlight sh %}
 $ ./configure
 $ make
 $ sudo make install
@@ -61,7 +61,7 @@ $ cd /usr/local/bin
 $ sudo ln -s docbook2texi docbook2x-texi
 $ sudo xmlcatalog --noout --add nextCatalog '' \
     file:///usr/local/share/docbook2X/xslt/catalog.xml --create /etc/xml/catalog
-```
+{% endhighlight %}
 
 ## xmlto
 
@@ -71,11 +71,11 @@ Install [xmlto](https://fedorahosted.org/releases/x/m/xmlto/) by first ensuring 
 
 Install Git, finally!
 
-```
+{% highlight sh %}
 $ ./configure
 $ make all doc info
 $ sudo make install install-doc install-html install-info
-```
+{% endhighlight %}
 
 At this point you should have a freshly built Git in `/usr/local` along with all of the documentation. Hurray! If that doesn't work for you, feel free to write to me. I would like to keep these instructions up to date as best I can.
 

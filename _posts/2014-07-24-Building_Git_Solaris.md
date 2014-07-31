@@ -12,7 +12,7 @@ description: Building Git and its documentation from source on OpenIndiana.
 
 The existing packages for [Git](http://git-scm.com) on [OpenIndiana](http://openindiana.org) are woefully out of date. Sure, they work, but they also pull in an ancient version of Python (2.4!). OpenIndiana already has much of what it needs, so building Git from source _should_ be easy. To start with, install those packages needed for compiling and installing software from source.
 
-```
+{% highlight sh %}
 $ pfexec pkg install developer/illumos-gcc
 $ pfexec pkg install developer/gnu-binutils
 $ pfexec pkg install system/header
@@ -20,15 +20,15 @@ $ pfexec pkg install system/library/math/header-math
 $ pfexec pkg install developer/library/lint
 $ pfexec pkg install compatibility/ucb
 $ export PATH=/opt/gcc/4.4.4/bin:$PATH
-```
+{% endhighlight %}
 
 Now we are ready to build and install Git from source.
 
-```
+{% highlight sh %}
 $ ./configure
 $ make
 $ pfexec make install
-```
+{% endhighlight %}
 
 And that is about how far most posts with regards to Git on Solaris will get you. But we desire more. What do we want? Man pages! When do we want them? Now! Okay, let's get to it.
 
@@ -40,19 +40,19 @@ To build Git's documentation from source, there is quite a bit of setup needed. 
 
 Retrieve the latest tarball for [AsciiDoc](http://sourceforge.net/projects/asciidoc/) and build using the usual command sequence. There is surprisingly little output for this one, but that is perfectly normal.
 
-```
+{% highlight sh %}
 $ ./configure
 $ make
 $ pfexec make install
-```
+{% endhighlight %}
 
 ### gettext
 
 Super easy, just use the package.
 
-```
+{% highlight sh %}
 $ pfexec pkg install text/gnu-gettext
-```
+{% endhighlight %}
 
 ### getopt
 
@@ -70,15 +70,15 @@ At this point `make` and `pfexec make install` should work, despite some suspici
 
 Another easy one. Thank you to whomever builds these packages.
 
-```
+{% highlight sh %}
 $ pfexec pkg install data/docbook
-```
+{% endhighlight %}
 
 ### Docbook2X
 
 [Docbook2X](http://sourceforge.net/projects/docbook2x/) converts DocBook documents to man and Texinfo format which is how we get the git man pages. Before you can build it, however, you must install the `XML::SAX` Perl module.
 
-```
+{% highlight sh %}
 $ pfexec perl -MCPAN -e 'install XML::SAX'
 $ ./configure
 $ make
@@ -87,7 +87,7 @@ $ cd /usr/local/bin
 $ pfexec ln -s docbook2texi docbook2x-texi
 $ pfexec xmlcatalog --noout --add nextCatalog '' \
     file:///usr/local/share/docbook2X/xslt/catalog.xml --create /etc/xml/catalog
-```
+{% endhighlight %}
 
 The symbolic link for `docbook2x-texi` is somethig I found somewhere when creating these instructions for Mac OS X and I have since forgotten the source. My apologies, and thanks, go out to whomever figured that out.
 
@@ -95,11 +95,11 @@ The symbolic link for `docbook2x-texi` is somethig I found somewhere when creati
 
 Compile and install [xmlto](https://fedorahosted.org/releases/x/m/xmlto/) by first ensuring that `/usr/local/bin` is in your `PATH` before `/usr/bin` (so it finds the `getopt` we just installed). Now the usual steps will suffice and we are nearly at our goal.
 
-```
+{% highlight sh %}
 $ ./configure
 $ make
 $ pfexec make install
-```
+{% endhighlight %}
 
 ### Finally, Git's documentation
 
@@ -107,9 +107,9 @@ Hallelujah, we're finally ready to build Git's documentation! Just one little mo
 
 And now to build the docs. Prepare to wait a while, it is a slow process.
 
-```
+{% highlight sh %}
 $ make doc info
 $ pfexec make install-doc install-html install-info
-```
+{% endhighlight %}
 
 Now you can type `git help checkout` and finally get the man page. Woohoo!

@@ -27,15 +27,15 @@ http://stackoverflow.com/questions/23550897/nokogiri-not-installing-in-ror-with-
 
 Good idea, but made no difference.
 
-```
+~~~
 $ xcode-select --install
-```
+~~~
 
 ## Ruby mkmf is broken
 
 Looks like Ruby's `mkmf` has some issues detecting the necessary functions on the Mac [^1]. Probably something to do with compiler flags. I'd love to know the real answer, but I haven't coded in C for a very long time.
 
-```
+~~~
 $ irb
 irb(main):001:0> require "mkmf"
 => true
@@ -48,22 +48,22 @@ checking for iconv_open() in /usr/include/iconv.h... no
 irb(main):004:0> have_func('iconv_open', '/usr/local/include/iconv.h')
 checking for iconv_open() in /usr/local/include/iconv.h... no
 => false
-```
+~~~
 
 Contents of those header files:
 
-```
+~~~
 $ grep iconv_open /usr/include/iconv.h
 iconv_t iconv_open (const char* /*tocode*/, const char* /*fromcode*/);
-```
+~~~
 
-```
+~~~
 $ grep iconv_open /usr/local/include/iconv.h
 #define iconv_open libiconv_open
 extern iconv_t iconv_open (const char* tocode, const char* fromcode);
 #define iconv_open_into libiconv_open_into
 extern int iconv_open_into (const char* tocode, const char* fromcode,
-```
+~~~
 
 It very well _is_ there, but mkmf is failing because the number of arguments is incorrect.
 
@@ -75,9 +75,9 @@ One of the answers to a similar question [^2] suggested using an older version o
 
 For now, at least, can get Nokogiri installed by selecting an older version. This does _not_ solve the problem, merely postpones it for as long as I can stick to this version.
 
-```
+~~~
 $ sudo gem install nokogiri -v '1.6.1'
-```
+~~~
 
 [^1]: https://www.ruby-forum.com/topic/1354865
 [^2]: http://stackoverflow.com/questions/19643153/error-to-install-nokogiri-on-osx-10-9-maverick

@@ -18,22 +18,22 @@ Building [Erlang](http://www.erlang.org) on [OpenIndiana](http://openindiana.org
 
 Basic tools for compiling software on OpenIndiana. You might already have half of these, but on a bare-bones OpenIndiana install, these will be needed to compile just about anything.
 
-```
+{% highlight sh %}
 $ pfexec pkg install developer/illumos-gcc
 $ pfexec pkg install developer/gnu-binutils
 $ pfexec pkg install system/header
 $ pfexec pkg install system/library/math/header-math
 $ pfexec pkg install developer/library/lint
 $ export PATH=/opt/gcc/4.4.4/bin:$PATH
-```
+{% endhighlight %}
 
 ### Java Development Kit
 
 For OpenIndiana, the provided JDK package will suffice.
 
-```
+{% highlight sh %}
 $ pfexec pkg install developer/java/jdk
-```
+{% endhighlight %}
 
 ### Apache FOP
 
@@ -43,20 +43,20 @@ Get the [binary](http://xmlgraphics.apache.org/fop/download.html) for the latest
 
 Once those are in place, building Erlang/OTP is easy.
 
-```
+{% highlight sh %}
 $ ./configure
 $ make
 $ export FOP_OPTS="-Xmx512m"
 $ make docs
 $ pfexec make install
 $ pfexec make install-docs
-```
+{% endhighlight %}
 
 And now to test it out:
 
-```
+{% highlight sh %}
 $ erl +V
 Erlang (ASYNC_THREADS,HIPE) (BEAM) emulator version 6.1
-```
+{% endhighlight %}
 
 If that works, terrific. If not, send me email or leave a comment, and I'll see what I can do.

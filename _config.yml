@@ -1,8 +1,13 @@
-name: Caffeinated
-markdown: redcarpet
-pygments: true
+title: Caffeinated - Blog of Nathan Fiedler
+markdown: kramdown
 keywords:
 - blog
 - nathan
 - fiedler
-description: Nathan Fiedler's mostly technical blog.
+description: My mostly technical blog wherein I attempt to sound like I know what I am doing.
+email: nathanfiedler@gmail.com
+baseurl: ""
+url: "http://nlfiedler.github.io"
+twitter_username: nlfiedler
+github_username: nlfiedler
+lsi: false

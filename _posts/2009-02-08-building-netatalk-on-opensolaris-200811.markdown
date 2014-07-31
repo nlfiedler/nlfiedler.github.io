@@ -26,22 +26,22 @@ The system is now capable of compiling software from source, in particular [neta
 
 The one prerequisite of netatalk is [Berkeley DB](http://www.oracle.com/technology/products/berkeley-db/). I found that netatalk 2.1.1 would not detect Berkeley DB 5.0 or higher so I had to use the previous stable release, 4.8.30 (on the Berkeley DB web site look for the previous releases link). Compiling it is pretty straightforward. Start by adding /usr/local/lib to the library load path (pfexec crle -u -l /usr/local/lib). Then compile and install Berkeley DB like so (consult their build instructions for details, but it basically goes like this):
 
-```
+~~~
 $ cd build_unix
 $ ../dist/configure --prefix=/usr/local
 $ make
 $ pfexec make install
-```
+~~~
 
 ## Installing netatalk
 
 Once Berkeley DB is installed we're ready to build netatalk. I'm skipping the PAM option here because it's more work to set it up and I'm generally looking for the fastest setup time I can find.
 
-```
+~~~
 $ ./configure --without-pam
 $ make
 $ pfexec make install
-```
+~~~
 
 Now comes the configuration stage. The setup described below suits my own needs, so if you want additional services then check out the netatalk [documentation](http://netatalk.sourceforge.net/2.0/htmldocs/configuration.html) for more information. In general though, you will probably want to make similar changes to the default configuration, so I'll detail what I've done for my environment.
 
