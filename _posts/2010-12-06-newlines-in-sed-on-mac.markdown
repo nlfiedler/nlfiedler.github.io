@@ -1,7 +1,7 @@
 ---
 author: nlfiedler
 comments: true
-date: 2010-12-06 00:43:47+00:00
+date: 2010-12-05 00:43:47+00:00
 layout: post
 slug: newlines-in-sed-on-mac
 title: Newlines in sed on Mac
