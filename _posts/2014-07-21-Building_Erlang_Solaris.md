@@ -12,6 +12,8 @@ description: Building Erlang/OTP from source on OpenIndiana using mostly system 
 
 Building [Erlang](http://www.erlang.org) on [OpenIndiana](http://openindiana.org) isn't really all that difficult, but does involve a few steps, so worth documenting in order to save time in the future. Why build Erlang? Because it [rocks!](http://erlangotp.com)
 
+_Update_: A [Fabric](http://www.fabfile.org) [script](https://github.com/nlfiedler/tanuki/blob/master/vagrant/fabfile.py) for performing everything you see here has been written. If you like using Fabric, feel free to copy code as you see fit. One difference is that the `fabfile.py` does not copy Apache FOP anywhere, it simply uses it temporarily to perform the build.
+
 ## Installing Dependencies
 
 ### Developer Tool Chain
